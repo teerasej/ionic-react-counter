@@ -9,6 +9,18 @@ const Home: React.FC = () => {
     setNewCounter(counter+1);
   }
 
+  const decreaseValue = () => {
+
+    let newValue = counter - 1;
+
+    if(newValue <= 0) {
+      setNewCounter(0);
+    } else {
+      setNewCounter(newValue);
+    }
+
+  }
+
 
   return (
     <IonPage>
@@ -25,7 +37,7 @@ const Home: React.FC = () => {
       </IonContent>
       <IonFooter className="ion-padding">
         <IonButton expand="block" onClick={increaseValue}>Increase</IonButton>
-        <IonButton expand="block">Decrease</IonButton>
+        <IonButton expand="block" onClick={decreaseValue}>Decrease</IonButton>
       </IonFooter>
     </IonPage>
   );
