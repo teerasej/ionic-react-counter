@@ -1,7 +1,10 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter, IonButton } from '@ionic/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Home: React.FC = () => {
+
+  const [counter, setNewCounter] = useState(0);
+
   return (
     <IonPage>
       <IonHeader>
@@ -16,8 +19,8 @@ const Home: React.FC = () => {
         }}>0</h1>
       </IonContent>
       <IonFooter className="ion-padding">
-          <IonButton expand="block">Increase</IonButton>
-          <IonButton expand="block">Decrease</IonButton>
+        <IonButton expand="block">Increase</IonButton>
+        <IonButton expand="block">Decrease</IonButton>
       </IonFooter>
     </IonPage>
   );
