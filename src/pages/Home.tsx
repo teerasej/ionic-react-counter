@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         <h1 style={{
           textAlign: 'center',
           fontSize: '100px'
-        }}>0</h1>
+        }}>{counter}</h1>
       </IonContent>
       <IonFooter className="ion-padding">
         <IonButton expand="block">Increase</IonButton>
