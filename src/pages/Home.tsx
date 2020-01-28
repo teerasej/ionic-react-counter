@@ -5,6 +5,11 @@ const Home: React.FC = () => {
 
   const [counter, setNewCounter] = useState(0);
 
+  const increaseValue = () => {
+    setNewCounter(counter+1);
+  }
+
+
   return (
     <IonPage>
       <IonHeader>
@@ -19,7 +24,7 @@ const Home: React.FC = () => {
         }}>{counter}</h1>
       </IonContent>
       <IonFooter className="ion-padding">
-        <IonButton expand="block">Increase</IonButton>
+        <IonButton expand="block" onClick={increaseValue}>Increase</IonButton>
         <IonButton expand="block">Decrease</IonButton>
       </IonFooter>
     </IonPage>
